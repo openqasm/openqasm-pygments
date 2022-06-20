@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Pygments Tools for OpenQASM &#8212; OpenQASM Pygments Tools  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-openqasm_pygments">
+<span id="pygments-tools-for-openqasm"></span><h1>Pygments Tools for OpenQASM<a class="headerlink" href="#module-openqasm_pygments" title="Permalink to this heading">¶</a></h1>
+<p>This project contains Pygments lexers for OpenQASM 2, OpenQASM 3, and the
+pulse-calibration dialect OpenPulse.  These will all register themselves with
+Pygments by suitable aliases (<code class="docutils literal notranslate"><span class="pre">qasm2</span></code>, <code class="docutils literal notranslate"><span class="pre">qasm3</span></code> and <code class="docutils literal notranslate"><span class="pre">openpulse</span></code>, among
+others).</p>
+<section id="openqasm-lexers">
+<h2>OpenQASM Lexers<a class="headerlink" href="#openqasm-lexers" title="Permalink to this heading">¶</a></h2>
+<p>This package contains lexers for both OpenQASM 2 and 3.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="openqasm_pygments.OpenQASM3Lexer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openqasm_pygments.</span></span><span class="sig-name descname"><span class="pre">OpenQASM3Lexer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openqasm_pygments.OpenQASM3Lexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A custom lexer for highlighting OpenQASM 3 code with Pygments.</p>
+<p>This registers itself as the Pygments aliases <code class="docutils literal notranslate"><span class="pre">qasm3</span></code> and <code class="docutils literal notranslate"><span class="pre">openqasm3</span></code>, and associates itself
+with filenames ending in <code class="docutils literal notranslate"><span class="pre">.qasm</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default_pulse_lexer</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>pygments.lexer.Lexer</em><em>, </em><em>None</em><em>]</em>) – The default lexer to use if no <code class="docutils literal notranslate"><span class="pre">defcalgrammar</span></code> statements are
+read.  This can be either a Pygments lexer alias as a string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;openpulse&quot;</span></code>), or
+an instance of a Pygments lexer.  If <code class="docutils literal notranslate"><span class="pre">infer_pulse_grammar</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the given
+lexer will be overridden if a <code class="docutils literal notranslate"><span class="pre">defcalgrammar</span></code> statement is encounted whose value is
+not a compatible alias.</p></li>
+<li><p><strong>infer_pulse_grammar</strong> (<em>bool</em>) – If set to <code class="docutils literal notranslate"><span class="pre">True</span></code> (default), then any <code class="docutils literal notranslate"><span class="pre">defcalgrammar</span></code>
+statements encountered during a run will be parsed for their value.  This value will be
+treated as a Pygments lexer alias, and used to find a lexer for any pulse blocks.</p></li>
+<li><p><strong>pulse_lexer_overrides</strong> (<em>Mapping</em><em>[</em><em>str</em><em>, </em><em>pygments.lexer.Lexer</em><em>]</em>) – Mapping of string aliases to Pygments lexers.  This mapping is
+used to provide specific overrides for different <code class="docutils literal notranslate"><span class="pre">defcalgrammar</span></code> statements; if the
+value is in this mapping, the given lexer will be used verbatim instead of using the
+Pygments alias machinery to find a lexer instance.  This will not be used if
+<code class="docutils literal notranslate"><span class="pre">infer_pulse_grammar</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="openqasm_pygments.OpenQASM2Lexer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openqasm_pygments.</span></span><span class="sig-name descname"><span class="pre">OpenQASM2Lexer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openqasm_pygments.OpenQASM2Lexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A custom lexer for highlighting OpenQASM 2 code with Pygments.</p>
+<p>This registers itself with the Pygments aliases <code class="docutils literal notranslate"><span class="pre">qasm2</span></code> and <code class="docutils literal notranslate"><span class="pre">openqasm2</span></code>, and associates
+itself with file names ending in <code class="docutils literal notranslate"><span class="pre">.qasm</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="pulse-grammar-lexers-for-openqasm-3">
+<h2>Pulse Grammar Lexers for OpenQASM 3<a class="headerlink" href="#pulse-grammar-lexers-for-openqasm-3" title="Permalink to this heading">¶</a></h2>
+<p>There is currently a single lexer for pulse calibration.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="openqasm_pygments.OpenPulseLexer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openqasm_pygments.</span></span><span class="sig-name descname"><span class="pre">OpenPulseLexer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openqasm_pygments.OpenPulseLexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Pygments lexer for the OpenPulse pulse-calibration dialect used with OpenQASM 3.</p>
+<p>This registers itself with the Pygments alias <code class="docutils literal notranslate"><span class="pre">openpulse</span></code>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">OpenQASM Pygments Tools</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, OpenQASM contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
