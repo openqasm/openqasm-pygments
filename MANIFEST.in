@@ -1,0 +1,2 @@
+# Include the test files.
+graft tests

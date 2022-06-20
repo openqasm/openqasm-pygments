@@ -1,0 +1,6 @@
+---
+prelude: >
+  The initial release of ``openqasm-pygments`` provides three Pygments lexers,
+  one each for OpenQASM 2, OpenQASM 3 and OpenPulse.  These are
+  :class:`.OpenQASM2Lexer`, :class:`.OpenQASM3Lexer` and class:`.OpenPulseLexer`
+  respectively.
