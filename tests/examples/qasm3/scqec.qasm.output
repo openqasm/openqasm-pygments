@@ -275,7 +275,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'row'               Token.Name.Function
+'row'               Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -297,7 +297,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'col'               Token.Name.Function
+'col'               Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -381,7 +381,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -488,7 +488,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'row'               Token.Name.Function
+'row'               Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -512,7 +512,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'col'               Token.Name.Function
+'col'               Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -663,7 +663,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -757,7 +757,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -873,7 +873,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'shot'              Token.Name.Function
+'shot'              Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -927,7 +927,7 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace

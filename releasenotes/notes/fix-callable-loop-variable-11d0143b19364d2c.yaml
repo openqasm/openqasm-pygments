@@ -1,0 +1,4 @@
+---
+fixes:
+  - |
+    Loop variables will no longer be lexed as callable tokens.

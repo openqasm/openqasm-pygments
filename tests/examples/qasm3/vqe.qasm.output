@@ -196,7 +196,7 @@
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -345,7 +345,7 @@
 'prec'              Token.Name
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -519,7 +519,7 @@
 'prec'              Token.Name
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'l'                 Token.Name.Function
+'l'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -543,7 +543,7 @@
 'prec'              Token.Name
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -670,7 +670,7 @@
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
@@ -785,7 +785,7 @@
 'prec'              Token.Name
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
-'t'                 Token.Name.Function
+'t'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace

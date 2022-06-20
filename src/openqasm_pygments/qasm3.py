@@ -168,6 +168,7 @@ class OpenQASM3Lexer(RegexLexer):
             # functions) as callables.  Since we use the same highlighting for gates and functions,
             # it doesn't matter that we'll tokenise (e.g.) the identifier in `rz(...)` with the
             # function rule not the gate one.
+            (_lexeme.IDENTIFIER + r"(?=[ \r\n\t]+in\b)", token.Name),  # Skip the loop variable.
             (_lexeme.IDENTIFIER + rf"(?=[ \r\n\t]+{_lexeme.IDENTIFIER})", token.Name.Function),
             (_lexeme.IDENTIFIER + r"(?=[ \r\n\t]*\()", token.Name.Function),
             # Identifiers.
