@@ -1,7 +1,7 @@
 project = 'OpenQASM Pygments Tools'
 copyright = '2022, OpenQASM contributors'
 author = 'OpenQASM contributors'
-version = "0.1.0"
+version = "0.1.1"
 
 extensions = [
     "sphinx.ext.autodoc",
