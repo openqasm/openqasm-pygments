@@ -18,6 +18,56 @@ class DummyLexer(RegexLexer):
     tokens = {"root": [("^.+$", token.Text)]}
 
 
+def test_function_lookahead(lexer_qasm3):
+    text = """
+gate f q {}
+def f() {}
+f a;
+f(1);
+f(1) a;
+"""
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Keyword.Declaration, "gate"),
+        (token.Name.Function, "f"),
+        (token.Name, "q"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Keyword.Declaration, "def"),
+        (token.Name.Function, "f"),
+        (token.Punctuation, "("),
+        (token.Punctuation, ")"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Name.Function, "f"),
+        (token.Name, "a"),
+        (token.Punctuation, ";"),
+        (token.Name.Function, "f"),
+        (token.Punctuation, "("),
+        (token.Number, "1"),
+        (token.Punctuation, ")"),
+        (token.Punctuation, ";"),
+        (token.Name.Function, "f"),
+        (token.Punctuation, "("),
+        (token.Number, "1"),
+        (token.Punctuation, ")"),
+        (token.Name, "a"),
+        (token.Punctuation, ";"),
+    ]
+
+
+def test_for_loop_variable_not_callable(lexer_qasm3):
+    text = "for uint i in a {}"
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Keyword, "for"),
+        (token.Keyword.Type, "uint"),
+        (token.Name, "i"),
+        (token.Keyword, "in"),
+        (token.Name, "a"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+    ]
+
+
 class TestPulseLexerDelegation:
     def test_inferred_known_alias(self, lexer_qasm3):
         # This uses a very (!) non-standard pulse-grammar lexer to test delegation

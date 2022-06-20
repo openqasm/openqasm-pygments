@@ -1133,7 +1133,7 @@
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 ' '                 Token.Text.Whitespace
-'i'                 Token.Name.Function
+'i'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace

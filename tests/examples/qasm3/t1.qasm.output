@@ -151,7 +151,7 @@
 '\n\n'              Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
-'p'                 Token.Name.Function
+'p'                 Token.Name
 ' '                 Token.Text.Whitespace
 'in'                Token.Keyword
 ' '                 Token.Text.Whitespace
