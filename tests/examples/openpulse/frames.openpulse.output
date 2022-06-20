@@ -1,0 +1,276 @@
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'drive0'            Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'driveframe0'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'drive0'            Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'// newframe(port pr, float[size] frequency, angle[size] phase)' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'measure_port'      Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'measure_frame_0'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'measure_port'      Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'measure_frame_1'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'measure_port'      Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'measure_frame_2'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'measure_port'      Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'measure_frame_3'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'measure_port'      Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'set_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'phase'             Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'phase'             Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'get_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'set_frequency'     Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'freq'              Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'shift_frequency'   Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'freq'              Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'get_frequency'     Token.Name.Builtin
+'('                 Token.Punctuation
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'fr'                Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'driveframe'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'4'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'frame'             Token.Keyword.Type
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'rz_frames'         Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'/*'                Token.Comment.Multiline
+' ... '             Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'// and so on'      Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'rz_frames'         Token.Name
+'['                 Token.Punctuation
+'q'                 Token.Name
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+'theta'             Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'temp1'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'get_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame1'            Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'temp2'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'get_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame2'            Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'set_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame1'            Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'temp2'             Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'set_phase'         Token.Name.Builtin
+'('                 Token.Punctuation
+'frame2'            Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'temp1'             Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

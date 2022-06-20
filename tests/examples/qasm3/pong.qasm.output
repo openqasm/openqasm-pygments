@@ -1,0 +1,445 @@
+'/*'                Token.Comment.Multiline
+'\n '               Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' 0 |   CNOT   |\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' 1 |   CNOT   |\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' 2 PPPMMMMMMPPP\n ' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'defcalgrammar'     Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"openpulse"'       Token.Literal.String
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'defcal'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'pong'              Token.Name.Function
+'('                 Token.Punctuation
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'dur'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'play'              Token.Name.Builtin
+' '                 Token.Text.Whitespace
+'d0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'gaussian'          Token.Name.Function
+'('                 Token.Punctuation
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'dur'               Token.Name
+')'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'defcal'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'pong_cx'           Token.Name.Function
+'('                 Token.Punctuation
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2'                Token.Name
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2'                Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'cross'             Token.Name
+'-'                 Token.Operator
+'res'               Token.Name.Function
+'('                 Token.Punctuation
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'4'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+'\n    '            Token.Text.Whitespace
+'x'                 Token.Name.Function
+'('                 Token.Punctuation
+'pi'                Token.Name.Constant
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// this is a defcal' Token.Comment.Single
+'\n    '            Token.Text.Whitespace
+'cross'             Token.Name
+'-'                 Token.Operator
+'res'               Token.Name.Function
+'('                 Token.Punctuation
+'-'                 Token.Operator
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'4'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'pong'              Token.Name.Function
+'('                 Token.Punctuation
+'amp'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'pong'              Token.Name.Function
+'('                 Token.Punctuation
+'-'                 Token.Operator
+'amp'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'pong'              Token.Name.Function
+'('                 Token.Punctuation
+'amp'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2'                Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$1'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$2'                Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+';'                 Token.Punctuation
+'    '              Token.Text.Whitespace
+'// these stretchable delays would be inserted by a high-level scheduling pass.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$1'                Token.Literal
+';'                 Token.Punctuation
+'    '              Token.Text.Whitespace
+'// it should be possible to write regular QASM using those ponged CNOTs' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'glue'              Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'-'                 Token.Operator
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$2'                Token.Literal
+';'                 Token.Punctuation
+'    '              Token.Text.Whitespace
+"// even if you don't care how the whole program is aligned (left of right)" Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'h'                 Token.Name
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'pong'              Token.Name.Function
+'('                 Token.Punctuation
+'0.5'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'10dt'              Token.Literal.Number.Float
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'pong_cx'           Token.Name.Function
+'('                 Token.Punctuation
+'0.5'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$1'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$2'                Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$1'                Token.Literal
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'$2'                Token.Literal
+';'                 Token.Punctuation
+'\n\n\n'            Token.Text.Whitespace
+'//boxto conditional, anonymous subroutine (named boxto not supported)' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'maxdur'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'1us'               Token.Literal.Number.Float
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'slowgate'          Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'stretch'           Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'a'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'c'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'a'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'box'               Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'maxdur'            Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'// fixed-duration anonymous subroutine' Token.Comment.Single
+'\n    '            Token.Text.Whitespace
+'if'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'('                 Token.Punctuation
+'c'                 Token.Name
+'=='                Token.Operator
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'U'                 Token.Name.Function
+'('                 Token.Punctuation
+'0.1'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.2'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.3'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// duration depends on result of measurement' Token.Comment.Single
+'\n    '            Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'a'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'                 ' Token.Text.Whitespace
+'// glue to allow to stretch (can be implicit)' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'// throw runtime error if `box` does not conclude by maxdur' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'a'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

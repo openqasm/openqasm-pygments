@@ -1,0 +1,22 @@
+// Force time of carrier to 0 for consistent phase for discrimination.
+frame stimulus_frame = newframe(m0, 5e9, 0);
+frame capture_frame = newframe(cap0, 5e9, 0);
+
+// Measurement stimulus envelope
+waveform meas_wf = gaussian_square(1.0, 16000dt, 262dt, 13952dt);
+
+// Play the stimulus
+play(stimulus_frame, meas_wf);
+
+// Align measure and capture frames
+barrier stimulus_frame, capture_frame;
+
+// Capture transmitted data after interaction with measurement resonator
+// extern capture_v1(frame capture_frame, duration duration) -> waveform;
+waveform raw_output = capture_v1(capture_frame, 16000dt);
+
+// Kernel and discriminate
+complex[float[32]] iq = boxcar(raw_output);
+bit result = discriminate(iq);
+
+return result;

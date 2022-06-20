@@ -1,0 +1,602 @@
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3.0'               Token.Literal
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// ==================' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// Array declarations' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// ==================' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+"// Declare 'my_ints' to be a 1D array of 8-bit signed integers, where the index" Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// runs from 0 to 15.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'16'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_ints'           Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+"// Declare 'my_doubles' to be a 2D array of double-precision floating-point" Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// values, where the first index runs from 0 to 7 and the second from 0 to 3.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'64'                Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'8'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'4'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_doubles'        Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Initialise a 1D array with fixed values.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'4'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_defined_uints'  Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'5'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'6'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'7'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'8'                 Token.Literal.Number
+'}'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Initialise a 2D array with fixed values.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'4'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_defined_floats' Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'{'                 Token.Punctuation
+'0.5'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.5'               Token.Literal.Number.Float
+'}'                 Token.Punctuation
+','                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'{'                 Token.Punctuation
+'1.0'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'2.0'               Token.Literal.Number.Float
+'}'                 Token.Punctuation
+','                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'{'                 Token.Punctuation
+'-'                 Token.Operator
+'0.4'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.7'               Token.Literal.Number.Float
+'}'                 Token.Punctuation
+','                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'{'                 Token.Punctuation
+'1.3'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+'2.1e-2'            Token.Literal.Number.Float
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Initialise an array using a row of another array.  Note that this copies the' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// data; changes to the values in `my_defined_float_row` will not affect' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// `my_defined_floats`.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_defined_float_row' Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Arrays can be defined in terms of compile-time constant dimension sizes, and' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// can use expressions in the slots of their initialisers.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'DIM_SIZE'          Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'2'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'DIM_SIZE'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'DIM_SIZE'          Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'all_ones'          Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'{'                 Token.Punctuation
+'2'                 Token.Literal.Number
+'+'                 Token.Operator
+'3'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'4'                 Token.Literal.Number
+'-'                 Token.Operator
+'1'                 Token.Literal.Number
+'}'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'3'                 Token.Literal.Number
+'+'                 Token.Operator
+'8'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'12'                Token.Literal.Number
+'-'                 Token.Operator
+'4'                 Token.Literal.Number
+'}'                 Token.Punctuation
+'}'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n\n'            Token.Text.Whitespace
+'// =============================' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// Array indexing and operations' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// =============================' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// Use `[]` notation to access array elements.  The dimensions are' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// comma-separated.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'my_defined_uints'  Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'b'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// The same notation is used in simple assignments.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_defined_uints'  Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'5'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+'0.45'              Token.Literal.Number.Float
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// In both, the indices can be (non-constant) expressions.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_defined_uints'  Token.Name
+'['                 Token.Punctuation
+'a'                 Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+' '                 Token.Text.Whitespace
+'+'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Assignments can also be done using an array, or array slice, on the left-hand' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// side, provided the right-hand side evaluates to an array of exactly the same' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// shape.  The assignment is done by copy, so subsequent changes to either of' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// the two parts will not affect the other.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'my_defined_float_row' Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// You can also use the slice notation to set elements.  Beware that it is' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// generally a logical error to read and write from overlapping slices at the' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// same time, and that OpenQASM 3 makes no guarantees about which order the data' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// will be read from and written to.  You might clobber data if you overlap.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'my_defined_floats' Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+':'                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+"// The ``sizeof`` operator returns the size of an array's dimension." Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'dimension'         Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_defined_uints'  Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// assigns 4.'     Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// The ``sizeof`` operator can also be used in two-argument form, where the' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// second argument is the index of the dimension, counting from 0.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'first_dimension'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_doubles'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// returns 8'      Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'second_dimension'  Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_doubles'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// returns 4'      Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// If the second argument is omitted from ``sizeof`` and the given array is' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// multi-dimensional, it defaults to returning the first dimension, so' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// ``sizeof(my_array) == sizeof(my_array, 0)`` in all circumstances.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'first_dimension'   Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_doubles'        Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// still 8.'       Token.Comment.Single
+'\n\n\n'            Token.Text.Whitespace
+'// =====================' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// Arrays in subroutines' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// =====================' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// Array arguments have a mandatory ``readonly`` or ``mutable`` specifier when' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// defined in a subroutine argument list.  This is because arrays are passed to' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// subroutines by reference, not by value, so modifications will propagate back' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// to the original data.  Such modifications are only allowed for ``mutable``' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// references, not ``readonly``.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'copy_3_bytes'      Token.Name.Function
+'('                 Token.Punctuation
+'readonly'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'in_array'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'mutable'           Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'8'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'out_array'         Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'// Within this block, ``in_array`` can be read from, but not written to,' Token.Comment.Single
+'\n    '            Token.Text.Whitespace
+'// whereas ``out_array`` can be both read from and written to.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// When specifying array subroutine parameters, there is a second format where' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// the sizes of the dimensions are not given explicitly, only the number of' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// dimensions.  This is where the ``sizeof`` operator is most useful.  In these' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// cases, `sizeof` is _not_ a compile-time constant.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'multi_dimensional_input' Token.Name.Function
+'('                 Token.Punctuation
+'readonly'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'array'             Token.Keyword.Type
+'['                 Token.Punctuation
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'#dim'              Token.Name.Attribute
+'='                 Token.Operator
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'my_array'          Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'dimension_0'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_array'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'dimension_1'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_array'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'dimension_2'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'sizeof'            Token.Name.Builtin
+'('                 Token.Punctuation
+'my_array'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'2'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

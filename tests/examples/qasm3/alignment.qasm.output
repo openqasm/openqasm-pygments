@@ -1,0 +1,102 @@
+'/*'                Token.Comment.Multiline
+' CPMG XY4 decoupling\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' This example demonstrates the use of stretch to\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' specify design intent on gate alignment, without\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' being tied to physical qubits and gates.\n' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3.0'               Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'include'           Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"stdgates.inc"'    Token.Literal.String
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'stretch'           Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'g'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'cx'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'g'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'U'                 Token.Name.Builtin
+'('                 Token.Punctuation
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'4'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'2'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+'*'                 Token.Operator
+'g'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

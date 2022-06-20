@@ -1,0 +1,172 @@
+'// Repetition code gate teleportation' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'include'           Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"stdgates.inc"'    Token.Literal.String
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// declarations'   Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'vote'              Token.Name.Function
+'('                 Token.Punctuation
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'logical_meas'      Token.Name.Function
+'('                 Token.Punctuation
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'c'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'c'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'r'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'vote'              Token.Name.Function
+'('                 Token.Punctuation
+'c'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// prep magic state' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'rz'                Token.Name.Function
+'('                 Token.Punctuation
+'pi'                Token.Name.Constant
+'/'                 Token.Operator
+'4'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// entangle two logical registers' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'cx'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'a'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// measure out the ancilla' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'r'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'logical_meas'      Token.Name.Function
+'('                 Token.Punctuation
+'a'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// if we get a logical |1> then we need to apply a logical Z correction' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'if'                Token.Keyword
+' '                 Token.Text.Whitespace
+'('                 Token.Punctuation
+'r'                 Token.Name
+' '                 Token.Text.Whitespace
+'=='                Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'z'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

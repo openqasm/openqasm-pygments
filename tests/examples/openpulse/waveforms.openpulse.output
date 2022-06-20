@@ -1,0 +1,307 @@
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'arb_waveform'      Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+'+'                 Token.Operator
+'0im'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+'+'                 Token.Operator
+'1im'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'('                 Token.Punctuation
+'1'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'+'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1im'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+'/'                 Token.Operator
+'sqrt'              Token.Name.Builtin
+'('                 Token.Punctuation
+'2'                 Token.Literal.Number
+')'                 Token.Punctuation
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'gaussian'          Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sigma'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sech'              Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sigma'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'gaussian_square'   Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'square_width'      Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sigma'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'drag'              Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sigma'             Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'beta'              Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'constant'          Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sine'              Token.Name.Function
+'('                 Token.Punctuation
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'amp'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'duration'          Token.Keyword.Type
+'  '                Token.Text.Whitespace
+'d'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'frequency'         Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'size'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'phase'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'mix'               Token.Name.Builtin
+'('                 Token.Punctuation
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf1'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf2'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'sum'               Token.Name.Builtin
+'('                 Token.Punctuation
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf1'               Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf2'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'phase_shift'       Token.Name.Builtin
+'('                 Token.Punctuation
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'ang'               Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'scale'             Token.Name.Builtin
+'('                 Token.Punctuation
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'factor'            Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

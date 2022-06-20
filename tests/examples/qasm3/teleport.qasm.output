@@ -1,0 +1,200 @@
+'// quantum teleportation example' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'include'           Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"stdgates.inc"'    Token.Literal.String
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'3'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'c0'                Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'c1'                Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'c2'                Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'// optional post-rotation for state tomography' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// empty gate body => identity gate' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'gate'              Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'post'              Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'reset'             Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'U'                 Token.Name.Builtin
+'('                 Token.Punctuation
+'0.3'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.2'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.1'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'cx'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'cx'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'c0'                Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'c1'                Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'c0'                Token.Name
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'z'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'c1'                Token.Name
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'x'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// braces optional in this case' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'post'              Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'c2'                Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

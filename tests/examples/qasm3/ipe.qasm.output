@@ -1,0 +1,223 @@
+'/*'                Token.Comment.Multiline
+'\n '               Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' Iterative phase estimation\n ' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'include'           Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"stdgates.inc"'    Token.Literal.String
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'10'                Token.Literal.Number
+';'                 Token.Punctuation
+'          '        Token.Text.Whitespace
+'// number of iterations' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'theta'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'pi'                Token.Name.Constant
+' '                 Token.Text.Whitespace
+'/'                 Token.Operator
+' '                 Token.Text.Whitespace
+'8'                 Token.Literal.Number
+';'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// phase angle on target qubit' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'    '              Token.Text.Whitespace
+'// phase estimation qubit' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'    '              Token.Text.Whitespace
+'// target qubit for the controlled-unitary gate' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'c'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'// phase estimation bits' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// initialize'     Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'reset'             Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'reset'             Token.Operator.Word
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// prepare uniform superposition of eigenvectors of phase' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// iterative phase estimation loop' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'power'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'i'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'  '                Token.Text.Whitespace
+'// implicitly cast val to int' Token.Comment.Single
+'\n  '              Token.Text.Whitespace
+'reset'             Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'ctrl'              Token.Name.Builtin
+' '                 Token.Text.Whitespace
+'@'                 Token.Operator
+' '                 Token.Text.Whitespace
+'pow'               Token.Name.Builtin
+'('                 Token.Punctuation
+'power'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'@'                 Token.Operator
+' '                 Token.Text.Whitespace
+'phase'             Token.Name.Function
+'('                 Token.Punctuation
+'theta'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'r'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'inv'               Token.Name.Builtin
+' '                 Token.Text.Whitespace
+'@'                 Token.Operator
+' '                 Token.Text.Whitespace
+'phase'             Token.Name.Function
+'('                 Token.Punctuation
+'c'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'c'                 Token.Name
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'// newest measurement outcome is associated to a pi/2 phase shift' Token.Comment.Single
+'\n  '              Token.Text.Whitespace
+'// in the next iteration, so shift all bits of c left' Token.Comment.Single
+'\n  '              Token.Text.Whitespace
+'c'                 Token.Name
+' '                 Token.Text.Whitespace
+'<<='               Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'power'             Token.Name
+' '                 Token.Text.Whitespace
+'<<='               Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Now c contains the n-bit estimate of phi in the' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// eigenvalue e^{i*phi} and qreg r is projected to an' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// approximate eigenstate of the phase gate.' Token.Comment.Single
+'\n'                Token.Text.Whitespace

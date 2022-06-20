@@ -1,0 +1,403 @@
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'eom_a_port'        Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'eom_b_port'        Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'aod_port'          Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Define the Raman frames, which are detuned by an amount Δ from the  5S1/2 to 5P1/2 transition' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// and offset from each other by the qubit_freq' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'raman_a_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'eom_a_port'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'Δ'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'raman_b_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'eom_b_port'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'Δ'                 Token.Name
+'-'                 Token.Operator
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+"// Three frames to phase track each qubit's rotating frame of reference at it's frequency" Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q1_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'aod_port'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q2_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'aod_port'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q3_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'aod_port'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Generic gaussian envelope' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'π_half_sig'        Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'gaussian'          Token.Name.Function
+'('                 Token.Punctuation
+'1.0'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'100dt'             Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Waveforms ultimately supplied to the AODs. We mix our general Gaussian pulse with a sine wave to' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// put a sideband on the outgoing pulse. This helps us target the qubit position while maintainig the' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// desired Rabi rate.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q1_π_half_sig'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'mix'               Token.Name.Builtin
+'('                 Token.Punctuation
+'π_half_sig'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'sine'              Token.Name.Function
+'('                 Token.Punctuation
+'q1_π_half_amp'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1_pos_freq'       Token.Name
+'-'                 Token.Operator
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q2_π_half_sig'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'mix'               Token.Name.Builtin
+'('                 Token.Punctuation
+'π_half_sig'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'sine'              Token.Name.Function
+'('                 Token.Punctuation
+'q2_π_half_amp'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2_pos_freq'       Token.Name
+'-'                 Token.Operator
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q3_π_half_sig'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'mix'               Token.Name.Builtin
+'('                 Token.Punctuation
+'π_half_sig'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'sine'              Token.Name.Function
+'('                 Token.Punctuation
+'q3_π_half_amp'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q3_pos_freq'       Token.Name
+'-'                 Token.Operator
+'qubit_freq'        Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Simultaneous π/2 pulses' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'raman_a_frame'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'constant'          Token.Name.Function
+'('                 Token.Punctuation
+'raman_a_amp'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'raman_b_frame'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'constant'          Token.Name.Function
+'('                 Token.Punctuation
+'raman_b_amp'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'q1_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q1_π_half_sig'     Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'q2_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2_π_half_sig'     Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'q3_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q3_π_half_sig'     Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'raman_a_frame'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'constant'          Token.Name.Function
+'('                 Token.Punctuation
+'raman_a_amp'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'raman_b_frame'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'constant'          Token.Name.Function
+'('                 Token.Punctuation
+'raman_b_amp'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'π_half_time'       Token.Name
+')'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'q2_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q2_π_half_sig'     Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Align all frames' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'raman_a_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'raman_b_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'q1_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'q2_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'q3_frame'          Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Second half of evolution time' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'τ'                 Token.Name.Constant
+'/'                 Token.Operator
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'raman_a_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'raman_b_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'q1_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'q2_frame'          Token.Name
+' '                 Token.Text.Whitespace
+'q3_frame'          Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Time-proportional phase increment signals different amount' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'q1_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'tppi_1'            Token.Name
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'τ'                 Token.Name.Constant
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'q2_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'tppi_2'            Token.Name
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'τ'                 Token.Name.Constant
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'shift_phase'       Token.Name.Builtin
+'('                 Token.Punctuation
+'q3_frame'          Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'tppi_3'            Token.Name
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'τ'                 Token.Name.Constant
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

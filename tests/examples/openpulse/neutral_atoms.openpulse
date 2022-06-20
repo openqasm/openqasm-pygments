@@ -1,0 +1,45 @@
+extern port eom_a_port;
+extern port eom_b_port;
+extern port aod_port;
+
+// Define the Raman frames, which are detuned by an amount Δ from the  5S1/2 to 5P1/2 transition
+// and offset from each other by the qubit_freq
+frame raman_a_frame = newframe(eom_a_port, Δ, 0.0);
+frame raman_b_frame = newframe(eom_b_port, Δ-qubit_freq, 0.0);
+
+// Three frames to phase track each qubit's rotating frame of reference at it's frequency
+frame q1_frame = newframe(aod_port, qubit_freq, 0)
+frame q2_frame = newframe(aod_port, qubit_freq, 0)
+frame q3_frame = newframe(aod_port, qubit_freq, 0)
+
+// Generic gaussian envelope
+waveform π_half_sig = gaussian(1.0, π_half_time, 100dt);
+
+// Waveforms ultimately supplied to the AODs. We mix our general Gaussian pulse with a sine wave to
+// put a sideband on the outgoing pulse. This helps us target the qubit position while maintainig the
+// desired Rabi rate.
+waveform q1_π_half_sig = mix(π_half_sig, sine(q1_π_half_amp, π_half_time, q1_pos_freq-qubit_freq, 0.0));
+waveform q2_π_half_sig = mix(π_half_sig, sine(q2_π_half_amp, π_half_time, q2_pos_freq-qubit_freq, 0.0));
+waveform q3_π_half_sig = mix(π_half_sig, sine(q3_π_half_amp, π_half_time, q3_pos_freq-qubit_freq, 0.0));
+
+// Simultaneous π/2 pulses
+play(raman_a_frame, constant(raman_a_amp, π_half_time));
+play(raman_b_frame, constant(raman_b_amp, π_half_time));
+play(q1_frame, q1_π_half_sig);
+play(q2_frame, q2_π_half_sig);
+play(q3_frame, q3_π_half_sig);
+
+play(raman_a_frame, constant(raman_a_amp, π_half_time));
+play(raman_b_frame, constant(raman_b_amp, π_half_time));
+play(q2_frame, q2_π_half_sig);
+
+// Align all frames
+barrier raman_a_frame raman_b_frame q1_frame q2_frame q3_frame;
+
+// Second half of evolution time
+delay[τ/2] raman_a_frame raman_b_frame q1_frame q2_frame q3_frame;
+
+// Time-proportional phase increment signals different amount
+shift_phase(q1_frame, tppi_1 * τ);
+shift_phase(q2_frame, tppi_2 * τ);
+shift_phase(q3_frame, tppi_3 * τ);

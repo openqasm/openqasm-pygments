@@ -1,0 +1,890 @@
+'/*'                Token.Comment.Multiline
+'\n '               Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' Variational eigensolver example\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+'\n '               Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' Goal is to estimate the energy for a fixed set of parameters.\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' The parameters are updated outside of this program and a new\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' OpenQASM circuit is generated for the next iteration.\n ' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'OPENQASM'          Token.Comment.Preproc
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'include'           Token.Keyword.Namespace
+' '                 Token.Text.Whitespace
+'"stdgates.inc"'    Token.Literal.String
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'10'                Token.Literal.Number
+';'                 Token.Punctuation
+'         '         Token.Text.Whitespace
+'// number of qubits' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'layers'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'3'                 Token.Literal.Number
+';'                 Token.Punctuation
+'     '             Token.Text.Whitespace
+'// number of entangler layers' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'prec'              Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'16'                Token.Literal.Number
+';'                 Token.Punctuation
+'      '            Token.Text.Whitespace
+'// precision of all types' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'const'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'shots'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'1000'              Token.Literal.Number
+';'                 Token.Punctuation
+'   '               Token.Text.Whitespace
+'// number of shots per Pauli observable' Token.Comment.Single
+'\n\n'              Token.Text.Whitespace
+'// Parameters could be written to local variables for this' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// iteration, but we will request them using extern functions' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'get_parameter'     Token.Name.Function
+'('                 Token.Punctuation
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'get_npaulis'       Token.Name.Function
+'('                 Token.Punctuation
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'get_pauli'         Token.Name.Function
+'('                 Token.Punctuation
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// The energy calculation uses floating point division,' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// so we do that calculation in an extern function' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'extern'            Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'update_energy'     Token.Name.Function
+'('                 Token.Punctuation
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'gate'              Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'entangler'         Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'i'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+'n'                 Token.Name
+'-'                 Token.Operator
+'2'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'cx'                Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+'+'                 Token.Operator
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'xmeasure'          Token.Name.Function
+'('                 Token.Punctuation
+'qubit'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'ymeasure'          Token.Name.Function
+'('                 Token.Punctuation
+'qubit'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'s'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'h'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'/*'                Token.Comment.Multiline
+' Pauli measurement circuit.\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' The first n-bits of spec are the X component.\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' The second n-bits of spec are the Z component.\n ' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'pauli_measurement' Token.Name.Function
+'('                 Token.Punctuation
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+'*'                 Token.Operator
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'b'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'i'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'temp'              Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'spec'              Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'&&'                Token.Operator
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+'['                 Token.Punctuation
+'n'                 Token.Name
+'+'                 Token.Operator
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'temp'              Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'xmeasure'          Token.Name.Function
+'('                 Token.Punctuation
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'spec'              Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'0'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'&&'                Token.Operator
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+'['                 Token.Punctuation
+'n'                 Token.Name
+'+'                 Token.Operator
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'temp'              Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'measure'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'spec'              Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+' '                 Token.Text.Whitespace
+'&&'                Token.Operator
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+'['                 Token.Punctuation
+'n'                 Token.Name
+'+'                 Token.Operator
+'i'                 Token.Name
+']'                 Token.Punctuation
+'=='                Token.Operator
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'temp'              Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'ymeasure'          Token.Name.Function
+'('                 Token.Punctuation
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'b'                 Token.Name
+' '                 Token.Text.Whitespace
+'^='                Token.Operator
+' '                 Token.Text.Whitespace
+'temp'              Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'b'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Circuit to prepare trial wave function' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'trial_circuit'     Token.Name.Function
+'('                 Token.Punctuation
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'l'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'layers'            Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'i'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'n'                 Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n      '          Token.Text.Whitespace
+'angle'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'theta'             Token.Name
+';'                 Token.Punctuation
+'\n      '          Token.Text.Whitespace
+'theta'             Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'get_parameter'     Token.Name.Function
+'('                 Token.Punctuation
+'l'                 Token.Name
+' '                 Token.Text.Whitespace
+'*'                 Token.Operator
+' '                 Token.Text.Whitespace
+'layers'            Token.Name
+' '                 Token.Text.Whitespace
+'+'                 Token.Operator
+' '                 Token.Text.Whitespace
+'i'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n      '          Token.Text.Whitespace
+'ry'                Token.Name.Function
+'('                 Token.Punctuation
+'theta'             Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+'['                 Token.Punctuation
+'i'                 Token.Name
+']'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'if'                Token.Keyword
+'('                 Token.Punctuation
+'l'                 Token.Name
+' '                 Token.Text.Whitespace
+'!='                Token.Operator
+' '                 Token.Text.Whitespace
+'layers'            Token.Name
+' '                 Token.Text.Whitespace
+'-'                 Token.Operator
+' '                 Token.Text.Whitespace
+'1'                 Token.Literal.Number
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'entangler'         Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'/*'                Token.Comment.Multiline
+' Apply VQE ansatz circuit and measure a Pauli operator\n ' Token.Comment.Multiline
+'*'                 Token.Comment.Multiline
+' given by spec. Return the number of 1 outcomes.\n ' Token.Comment.Multiline
+'*/'                Token.Comment.Multiline
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'counts_for_term'   Token.Name.Function
+'('                 Token.Punctuation
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+'*'                 Token.Operator
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'counts'            Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'i'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+':'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'shots'             Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'b'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'reset'             Token.Operator.Word
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'trial_circuit'     Token.Name.Function
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'b'                 Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'pauli_measurement' Token.Name.Function
+'('                 Token.Punctuation
+'spec'              Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'counts'            Token.Name
+' '                 Token.Text.Whitespace
+'+='                Token.Operator
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+'('                 Token.Punctuation
+'b'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'counts'            Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Estimate the expected energy' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'def'               Token.Keyword.Declaration
+' '                 Token.Text.Whitespace
+'estimate_energy'   Token.Name.Function
+'('                 Token.Punctuation
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'->'                Token.Operator
+' '                 Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'energy'            Token.Name
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'npaulis'           Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'get_npaulis'       Token.Name.Function
+'('                 Token.Punctuation
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'for'               Token.Keyword
+' '                 Token.Text.Whitespace
+'int'               Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'t'                 Token.Name.Function
+' '                 Token.Text.Whitespace
+'in'                Token.Keyword
+' '                 Token.Text.Whitespace
+'['                 Token.Punctuation
+'0'                 Token.Literal.Number
+':'                 Token.Punctuation
+'npaulis'           Token.Name
+'-'                 Token.Operator
+'1'                 Token.Literal.Number
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'{'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+'['                 Token.Punctuation
+'2'                 Token.Literal.Number
+'*'                 Token.Operator
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'spec'              Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'get_pauli'         Token.Name.Function
+'('                 Token.Punctuation
+'t'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'uint'              Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'counts'            Token.Name
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'counts'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'counts_for_term'   Token.Name.Function
+'('                 Token.Punctuation
+'spec'              Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n    '            Token.Text.Whitespace
+'energy'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'update_energy'     Token.Name.Function
+'('                 Token.Punctuation
+'t'                 Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'counts'            Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'energy'            Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n  '              Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'energy'            Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'}'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'qubit'             Token.Keyword.Type
+'['                 Token.Punctuation
+'n'                 Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'q'                 Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'prec'              Token.Name
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'energy'            Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'energy'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'estimate_energy'   Token.Name.Function
+'('                 Token.Punctuation
+'q'                 Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

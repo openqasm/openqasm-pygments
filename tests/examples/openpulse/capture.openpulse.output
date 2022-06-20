@@ -1,0 +1,138 @@
+'// Force time of carrier to 0 for consistent phase for discrimination.' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'stimulus_frame'    Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'m0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'capture_frame'     Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'cap0'              Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5e9'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0'                 Token.Literal.Number
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Measurement stimulus envelope' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'meas_wf'           Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'gaussian_square'   Token.Name.Function
+'('                 Token.Punctuation
+'1.0'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'16000dt'           Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'262dt'             Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'13952dt'           Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Play the stimulus' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'stimulus_frame'    Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'meas_wf'           Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Align measure and capture frames' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'barrier'           Token.Operator.Word
+' '                 Token.Text.Whitespace
+'stimulus_frame'    Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'capture_frame'     Token.Name
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Capture transmitted data after interaction with measurement resonator' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'// extern capture_v1(frame capture_frame, duration duration) -> waveform;' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'raw_output'        Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'capture_v1'        Token.Name.Function
+'('                 Token.Punctuation
+'capture_frame'     Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'16000dt'           Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// Kernel and discriminate' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'complex'           Token.Keyword.Type
+'['                 Token.Punctuation
+'float'             Token.Keyword.Type
+'['                 Token.Punctuation
+'32'                Token.Literal.Number
+']'                 Token.Punctuation
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'iq'                Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'boxcar'            Token.Name.Function
+'('                 Token.Punctuation
+'raw_output'        Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'bit'               Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'result'            Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'discriminate'      Token.Name.Function
+'('                 Token.Punctuation
+'iq'                Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'return'            Token.Keyword
+' '                 Token.Text.Whitespace
+'result'            Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

@@ -1,0 +1,11 @@
+waveform arb_waveform = [1+0im, 0+1im, (1 + 1im)/sqrt(2)];
+extern gaussian(complex[float[size]] amp, duration d, duration sigma) -> waveform;
+extern sech(complex[float[size]] amp, duration d, duration sigma) -> waveform;
+extern gaussian_square(complex[float[size]] amp, duration d, duration square_width, duration sigma) -> waveform;
+extern drag(complex[float[size]] amp, duration d, duration sigma, float[size] beta) -> waveform;
+extern constant(complex[float[size]] amp, duration d) -> waveform;
+extern sine(complex[float[size]] amp, duration  d, float[size] frequency, angle[size] phase) -> waveform;
+extern mix(waveform wf1, waveform wf2) -> waveform;
+extern sum(waveform wf1, waveform wf2) -> waveform;
+extern phase_shift(waveform wf, angle ang) -> waveform;
+extern scale(waveform wf, float factor) -> waveform;

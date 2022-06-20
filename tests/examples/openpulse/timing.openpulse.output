@@ -1,0 +1,143 @@
+'extern'            Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'port'              Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'d0'                Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'// initialized with absolute time 0 because `cal` is global scope' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'driveframe1'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'d0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5.0e9'             Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'waveform'          Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'gaussian'          Token.Name.Function
+'('                 Token.Punctuation
+'0.5'               Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'16ns'              Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'4ns'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'driveframe1'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// initialized to time at beginning of `my_gate2`' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'driveframe2'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'d0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5.0e9'             Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'driveframe2'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// initialized to time at beginning of `my_gate3`' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'frame'             Token.Keyword.Type
+' '                 Token.Text.Whitespace
+'driveframe3'       Token.Name
+' '                 Token.Text.Whitespace
+'='                 Token.Operator
+' '                 Token.Text.Whitespace
+'newframe'          Token.Name.Builtin
+'('                 Token.Punctuation
+'d0'                Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'5.0e9'             Token.Literal.Number.Float
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'0.0'               Token.Literal.Number.Float
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'play'              Token.Name.Builtin
+'('                 Token.Punctuation
+'driveframe3'       Token.Name
+','                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'wf'                Token.Name
+')'                 Token.Punctuation
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// driveframe1.time = 0ns when `play(driveframe1, wf)` is issued, advances to 16ns after `play`' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_gate1'          Token.Name
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'// driveframe2.time = 16ns when initialized via `newframe`' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_gate2'          Token.Name
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace
+'// driveframe3.time = 32ns when initialized via `newframe`' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'my_gate3'          Token.Name
+' '                 Token.Text.Whitespace
+'$0'                Token.Literal
+';'                 Token.Punctuation
+'\n\n'              Token.Text.Whitespace
+'// driveframe advances by 13ns' Token.Comment.Single
+'\n'                Token.Text.Whitespace
+'delay'             Token.Operator.Word
+'['                 Token.Punctuation
+'13ns'              Token.Literal.Number.Float
+']'                 Token.Punctuation
+' '                 Token.Text.Whitespace
+'driveframe'        Token.Name
+';'                 Token.Punctuation
+'\n'                Token.Text.Whitespace

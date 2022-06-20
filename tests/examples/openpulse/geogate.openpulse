@@ -1,0 +1,20 @@
+extern port dq;
+float fq_01 = 5e9; // hardcode or pull from some function
+float anharm = 300e6; // hardcode or pull from some function
+frame frame_01 = newframe(dq, fq_01, 0);
+frame frame_12 = newframe(dq, fq_01 + anharm, 0);
+
+// theta: rotation angle (about z-axis) on Bloch sphere
+
+// Assume we have calibrated 0->1 pi pulses and 1->2 pi pulse
+// envelopes (no sideband)
+waveform X_01 = {};
+waveform X_12 = {};
+float[32] a = sin(theta/2);
+float[32] b = sqrt(1-a**2);
+
+// Double-tap
+play(frame_01, scale(a, X_01));
+play(frame_12, scale(b, X_12));
+play(frame_01, scale(a, X_01));
+play(frame_12, scale(b, X_12));

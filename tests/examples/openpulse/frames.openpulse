@@ -1,0 +1,22 @@
+extern port drive0;
+frame driveframe0 = newframe(drive0, 5e9, 0.0); // newframe(port pr, float[size] frequency, angle[size] phase)
+extern port measure_port;
+frame measure_frame_0 = newframe(measure_port, 5e9, 0.0);
+frame measure_frame_1 = newframe(measure_port, 5e9, 0.0);
+frame measure_frame_2 = newframe(measure_port, 5e9, 0.0);
+frame measure_frame_3 = newframe(measure_port, 5e9, 0.0);
+set_phase(frame fr, angle phase);
+shift_phase(frame fr, angle phase);
+get_phase(frame fr) -> angle;
+set_frequency(frame fr, float freq);
+shift_frequency(frame fr, float freq);
+get_frequency(frame fr) -> float;
+shift_phase(driveframe, pi/4);
+array[frame, 8] rz_frames;
+frame[0] = newframe(/* ... */);
+// and so on
+shift_phase(rz_frames[q], -theta);
+angle temp1 = get_phase(frame1);
+angle temp2 = get_phase(frame2);
+set_phase(frame1, temp2);
+set_phase(frame2, temp1);
