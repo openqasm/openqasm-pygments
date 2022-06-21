@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-package:
-    name: Build and Publish
+    name: Publish package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,13 +28,25 @@ jobs:
             ./dist/*.whl
             ./dist/*.tar.gz
 
-      - name: Publish
+      - name: Publish to PyPI
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.OPENQASM_BOT_PYPI_TOKEN }}
         run: twine upload dist/*.whl dist/*.tar.gz
 
+      - name: Publish to GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          prerelease: false
+          fail_on_unmatched_files: true
+          generate_release_notes: true
+          files: |
+            ./dist/*.whl
+            ./dist/*.tar.gz
+
   deploy-docs:
+    name: Publish documentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
