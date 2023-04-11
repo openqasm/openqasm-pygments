@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Fixed handling of the ``if`` and ``pi`` tokens in OpenQASM 2.  These will now be correctly
+    tokenised as ``Token.Keyword`` and ``Token.Name.Constant`` as was originally intended.

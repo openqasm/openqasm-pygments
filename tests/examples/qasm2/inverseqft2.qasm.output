@@ -83,7 +83,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c0'                Token.Name
 '=='                Token.Operator
@@ -92,7 +92,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '2'                 Token.Literal.Number
 ')'                 Token.Punctuation
@@ -126,7 +126,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c0'                Token.Name
 '=='                Token.Operator
@@ -135,7 +135,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '4'                 Token.Literal.Number
 ')'                 Token.Punctuation
@@ -146,7 +146,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c1'                Token.Name
 '=='                Token.Operator
@@ -155,7 +155,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '2'                 Token.Literal.Number
 ')'                 Token.Punctuation
@@ -189,7 +189,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c0'                Token.Name
 '=='                Token.Operator
@@ -198,7 +198,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '8'                 Token.Literal.Number
 ')'                 Token.Punctuation
@@ -209,7 +209,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c1'                Token.Name
 '=='                Token.Operator
@@ -218,7 +218,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '4'                 Token.Literal.Number
 ')'                 Token.Punctuation
@@ -229,7 +229,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c2'                Token.Name
 '=='                Token.Operator
@@ -238,7 +238,7 @@
 ' '                 Token.Text.Whitespace
 'u1'                Token.Name.Function
 '('                 Token.Punctuation
-'pi'                Token.Name
+'pi'                Token.Name.Constant
 '/'                 Token.Operator
 '2'                 Token.Literal.Number
 ')'                 Token.Punctuation

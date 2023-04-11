@@ -149,7 +149,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c0'                Token.Name
 '=='                Token.Operator
@@ -164,7 +164,7 @@
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
-'if'                Token.Name.Function
+'if'                Token.Keyword
 '('                 Token.Punctuation
 'c1'                Token.Name
 '=='                Token.Operator
