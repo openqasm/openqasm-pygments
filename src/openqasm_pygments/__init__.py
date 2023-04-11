@@ -1,6 +1,6 @@
 """Tools for working with OpenQASM source code with Pygments."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from .exceptions import LexerWarning
 
