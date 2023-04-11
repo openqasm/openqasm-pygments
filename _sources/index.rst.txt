@@ -14,8 +14,10 @@ OpenQASM Lexers
 This package contains lexers for both OpenQASM 2 and 3.
 
 .. autoclass:: OpenQASM3Lexer
+   :class-doc-from: class
 
 .. autoclass:: OpenQASM2Lexer
+   :class-doc-from: class
 
 
 Pulse Grammar Lexers for OpenQASM 3
@@ -24,3 +26,4 @@ Pulse Grammar Lexers for OpenQASM 3
 There is currently a single lexer for pulse calibration.
 
 .. autoclass:: OpenPulseLexer
+   :class-doc-from: class
