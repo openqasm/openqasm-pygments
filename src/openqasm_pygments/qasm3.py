@@ -75,7 +75,7 @@ class OpenQASM3Lexer(RegexLexer):
     tokens = {
         "root": [
             (r"^[ \t]*#?pragma", token.Comment.Preproc, "pragma"),
-            (r"^[ \t]*@\w+", token.Name.Decorator, "annotation"),
+            (r"^[ \t]*@\w+(\.\w+)*", token.Name.Decorator, "annotation"),
             (r"[ \r\n\t]+", token.Whitespace),
             (r"\bOPENQASM\b", token.Comment.Preproc, "version"),
             (r"//.*$", token.Comment.Single),
