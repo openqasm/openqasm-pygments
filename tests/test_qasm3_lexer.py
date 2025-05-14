@@ -68,6 +68,23 @@ def test_for_loop_variable_not_callable(lexer_qasm3):
     ]
 
 
+def test_annotation_namespace(lexer_qasm3):
+    text = """\
+@annotation
+@namespace.annotation
+@namespace1.namespace2.annotation
+qubit q;
+"""
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Name.Decorator, "@annotation"),
+        (token.Name.Decorator, "@namespace.annotation"),
+        (token.Name.Decorator, "@namespace1.namespace2.annotation"),
+        (token.Keyword.Type, "qubit"),
+        (token.Name, "q"),
+        (token.Punctuation, ";"),
+    ]
+
+
 class TestPulseLexerDelegation:
     def test_inferred_known_alias(self, lexer_qasm3):
         # This uses a very (!) non-standard pulse-grammar lexer to test delegation
