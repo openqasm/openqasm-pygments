@@ -1,0 +1,5 @@
+---
+upgrade:
+  - |
+    The officially supported Python versions are now 3.9 onwards.  Any remaining support for the
+    end-of-life Pythons 3.7 and 3.8 is coincidental and may break without warning.
