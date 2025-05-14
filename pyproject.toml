@@ -24,7 +24,7 @@ valid-classmethod-first-arg = ["cls"]
 valid-metaclass-classmethod-first-arg = ["cls"]
 [tool.pylint.exceptions]
 # Exceptions that will emit a warning when caught.
-overgeneral-exceptions = ["BaseException"]
+overgeneral-exceptions = ["builtins.BaseException"]
 [tool.pylint."messages control"]
 disable = [
     "duplicate-code",
