@@ -1,0 +1,4 @@
+---
+fixes:
+  - |
+    Annotation keywords will now be correctly lexed as a single ``Token.Name.Decorator`` token.
