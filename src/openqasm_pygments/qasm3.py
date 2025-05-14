@@ -92,7 +92,7 @@ class OpenQASM3Lexer(RegexLexer):
             ("let", token.Keyword.Declaration),
             (
                 words(
-                    "break continue end if else for while box return in".split(),
+                    "break continue end if else for while box return in switch case default".split(),
                     prefix="\\b",
                     suffix="\\b",
                 ),

@@ -85,6 +85,37 @@ qubit q;
     ]
 
 
+def test_switch_case(lexer_qasm3):
+    text = """\
+switch (i) {
+    case 1, 2 {}
+    case 3 {}
+    default {}
+}
+"""
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Keyword, "switch"),
+        (token.Punctuation, "("),
+        (token.Name, "i"),
+        (token.Punctuation, ")"),
+        (token.Punctuation, "{"),
+        (token.Keyword, "case"),
+        (token.Literal.Number, "1"),
+        (token.Punctuation, ","),
+        (token.Literal.Number, "2"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Keyword, "case"),
+        (token.Literal.Number, "3"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Keyword, "default"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Punctuation, "}"),
+    ]
+
+
 class TestPulseLexerDelegation:
     def test_inferred_known_alias(self, lexer_qasm3):
         # This uses a very (!) non-standard pulse-grammar lexer to test delegation

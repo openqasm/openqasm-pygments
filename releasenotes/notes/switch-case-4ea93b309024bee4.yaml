@@ -1,0 +1,4 @@
+---
+features:
+  - |
+    The new keywords ``switch``, ``case`` and ``default`` now lex correctly.
