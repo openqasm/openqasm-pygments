@@ -81,7 +81,7 @@ qubit q;
         (token.Name.Decorator, "@namespace1.namespace2.annotation"),
         (token.Keyword.Type, "qubit"),
         (token.Name, "q"),
-        (token.Punctuation, ";")
+        (token.Punctuation, ";"),
     ]
 
 
