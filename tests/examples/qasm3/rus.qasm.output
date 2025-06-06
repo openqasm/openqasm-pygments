@@ -57,7 +57,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '2'                 Token.Literal.Number
@@ -65,17 +66,20 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'ccx'               Token.Name.Function
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
@@ -92,12 +96,14 @@
 ' '                 Token.Text.Whitespace
 'psi'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 's'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'psi'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'ccx'               Token.Name.Function
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
@@ -114,17 +120,20 @@
 ' '                 Token.Text.Whitespace
 'psi'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'z'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'psi'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'measure'           Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'anc'               Token.Name
@@ -133,7 +142,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
@@ -199,7 +209,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'flags'             Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator

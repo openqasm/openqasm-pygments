@@ -11,7 +11,8 @@
 'b'                 Token.Name
 '\n'                Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'U'                 Token.Name.Builtin
 '('                 Token.Punctuation
 '0'                 Token.Literal.Number
@@ -29,7 +30,8 @@
 ' '                 Token.Text.Whitespace
 'a'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'CX'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'a'                 Token.Name
@@ -37,7 +39,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'U'                 Token.Name.Builtin
 '('                 Token.Punctuation
 '0'                 Token.Literal.Number
@@ -56,7 +59,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'CX'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'a'                 Token.Name
@@ -64,7 +68,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'U'                 Token.Name.Builtin
 '('                 Token.Punctuation
 '0'                 Token.Literal.Number

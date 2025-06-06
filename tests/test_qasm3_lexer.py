@@ -71,17 +71,69 @@ def test_for_loop_variable_not_callable(lexer_qasm3):
 def test_annotation_namespace(lexer_qasm3):
     text = """\
 @annotation
+@annotation payload
 @namespace.annotation
-@namespace1.namespace2.annotation
+@namespace1.namespace2.annotation some payload
 qubit q;
 """
     assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
         (token.Name.Decorator, "@annotation"),
+        (token.Name.Decorator, "@annotation"),
+        (token.Text, "payload"),
         (token.Name.Decorator, "@namespace.annotation"),
         (token.Name.Decorator, "@namespace1.namespace2.annotation"),
+        (token.Text, "some payload"),
         (token.Keyword.Type, "qubit"),
         (token.Name, "q"),
         (token.Punctuation, ";"),
+    ]
+
+
+def test_indented_annotation(lexer_qasm3):
+    text = """
+box {
+    @annotation payload
+    @annotation
+
+    @a.b payload
+    box {}
+}
+"""
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Keyword, "box"),
+        (token.Punctuation, "{"),
+        (token.Name.Decorator, "@annotation"),
+        (token.Text, "payload"),
+        (token.Name.Decorator, "@annotation"),
+        (token.Name.Decorator, "@a.b"),
+        (token.Text, "payload"),
+        (token.Keyword, "box"),
+        (token.Punctuation, "{"),
+        (token.Punctuation, "}"),
+        (token.Punctuation, "}"),
+    ]
+
+
+def test_indented_pragma(lexer_qasm3):
+    text = """
+pragma payload
+#pragma
+box {
+    #pragma another payload
+
+    pragma
+}
+"""
+    assert _remove_whitespace(lexer_qasm3.get_tokens(text)) == [
+        (token.Comment.Preproc, "pragma"),
+        (token.Text, "payload"),
+        (token.Comment.Preproc, "#pragma"),
+        (token.Keyword, "box"),
+        (token.Punctuation, "{"),
+        (token.Comment.Preproc, "#pragma"),
+        (token.Text, "another payload"),
+        (token.Comment.Preproc, "pragma"),
+        (token.Punctuation, "}"),
     ]
 
 

@@ -1,0 +1,17 @@
+---
+features:
+  - |
+    Annotations and pragmas that are indented will now tokenise correctly, without including the
+    leading whitespace of the line.
+fixes:
+  - |
+    The free-form payloads of annotations and pragmas will now no longer include preceding spaces
+    that only separate the payload from the annotation/pragma keywords.
+  - |
+    Indented annotations and pragmas will now more reliably tokenise correctly; previously, they
+    were highly sensitive to whitespace on the preceding lines.
+other:
+  - |
+    Whitespace tokens now split after newlines, except if the following character is also a newline
+    character.  This is so that newline-sensitive tokenisation like annotations and pragmas can
+    match correctly.

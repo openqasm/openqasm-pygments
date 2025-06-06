@@ -45,12 +45,14 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
@@ -58,7 +60,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
@@ -85,12 +88,14 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
@@ -165,7 +170,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'bp'                Token.Name
@@ -190,7 +196,8 @@
 '}'                 Token.Punctuation
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '2'                 Token.Literal.Number
@@ -198,12 +205,14 @@
 ' '                 Token.Text.Whitespace
 'pf'                Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bellprep'          Token.Name.Function
 ' '                 Token.Text.Whitespace
 'bp'                Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'io'                Token.Name
@@ -214,12 +223,14 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'io'                Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'pf'                Token.Name
 '['                 Token.Punctuation
 '0'                 Token.Literal.Number
@@ -231,7 +242,8 @@
 ' '                 Token.Text.Whitespace
 'io'                Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'pf'                Token.Name
 '['                 Token.Punctuation
 '1'                 Token.Literal.Number
@@ -246,7 +258,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 ' '                 Token.Text.Whitespace
 '('                 Token.Punctuation
@@ -265,7 +278,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 ' '                 Token.Text.Whitespace
 '('                 Token.Punctuation
@@ -284,7 +298,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'io'                Token.Name

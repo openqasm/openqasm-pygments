@@ -100,7 +100,8 @@
 '='                 Token.Operator
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '{'                 Token.Punctuation
 '0.5'               Token.Literal.Number.Float
 ','                 Token.Punctuation
@@ -108,7 +109,8 @@
 '0.5'               Token.Literal.Number.Float
 '}'                 Token.Punctuation
 ','                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '{'                 Token.Punctuation
 '1.0'               Token.Literal.Number.Float
 ','                 Token.Punctuation
@@ -116,7 +118,8 @@
 '2.0'               Token.Literal.Number.Float
 '}'                 Token.Punctuation
 ','                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '{'                 Token.Punctuation
 '-'                 Token.Operator
 '0.4'               Token.Literal.Number.Float
@@ -125,7 +128,8 @@
 '0.7'               Token.Literal.Number.Float
 '}'                 Token.Punctuation
 ','                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '{'                 Token.Punctuation
 '1.3'               Token.Literal.Number.Float
 ','                 Token.Punctuation
@@ -505,9 +509,11 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '// Within this block, ``in_array`` can be read from, but not written to,' Token.Comment.Single
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '// whereas ``out_array`` can be both read from and written to.' Token.Comment.Single
 '\n'                Token.Text.Whitespace
 '}'                 Token.Punctuation
@@ -543,7 +549,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number
@@ -561,7 +568,8 @@
 '0'                 Token.Literal.Number
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number
@@ -579,7 +587,8 @@
 '1'                 Token.Literal.Number
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'uint'              Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number

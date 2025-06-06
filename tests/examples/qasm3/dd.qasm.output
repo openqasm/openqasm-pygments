@@ -120,7 +120,8 @@
 'box'               Token.Keyword
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'delay'             Token.Operator.Word
 '['                 Token.Punctuation
 'start_stretch'     Token.Name
@@ -128,12 +129,14 @@
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'x'                 Token.Name
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'delay'             Token.Operator.Word
 '['                 Token.Punctuation
 'middle_stretch'    Token.Name
@@ -141,12 +144,14 @@
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'y'                 Token.Name
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'delay'             Token.Operator.Word
 '['                 Token.Punctuation
 'middle_stretch'    Token.Name
@@ -154,12 +159,14 @@
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'x'                 Token.Name
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'delay'             Token.Operator.Word
 '['                 Token.Punctuation
 'middle_stretch'    Token.Name
@@ -167,12 +174,14 @@
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'y'                 Token.Name
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'delay'             Token.Operator.Word
 '['                 Token.Punctuation
 'end_stretch'       Token.Name
@@ -180,7 +189,8 @@
 ' '                 Token.Text.Whitespace
 '$0'                Token.Literal
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name
 ' '                 Token.Text.Whitespace
 '$2'                Token.Literal
@@ -188,7 +198,8 @@
 ' '                 Token.Text.Whitespace
 '$3'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name
 ' '                 Token.Text.Whitespace
 '$1'                Token.Literal
@@ -196,7 +207,8 @@
 ' '                 Token.Text.Whitespace
 '$2'                Token.Literal
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'u'                 Token.Name
 ' '                 Token.Text.Whitespace
 '$3'                Token.Literal
