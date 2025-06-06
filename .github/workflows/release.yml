@@ -6,8 +6,8 @@ on:
       - '*'
 
 jobs:
-  deploy-package:
-    name: Publish package
+  build-package:
+    name: Build package for publication
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,15 +24,27 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
+          name: openqasm3_pygments-dist
           path: |
             ./dist/*.whl
             ./dist/*.tar.gz
 
-      - name: Publish to PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.OPENQASM_BOT_PYPI_TOKEN }}
-        run: twine upload dist/*.whl dist/*.tar.gz
+  deploy-package:
+    name: Deploy package to PyPI
+    runs-on: ubuntu-latest
+    needs: ["build-package"]
+    environment: release
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: openqasm3_pygments-dist
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist
 
       - name: Publish to GitHub
         uses: softprops/action-gh-release@v2
