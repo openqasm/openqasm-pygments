@@ -58,7 +58,8 @@
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '3'                 Token.Literal.Number
@@ -66,12 +67,14 @@
 ' '                 Token.Text.Whitespace
 'c'                 Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'r'                 Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'measure'           Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'd'                 Token.Name
@@ -80,7 +83,8 @@
 ' '                 Token.Text.Whitespace
 'c'                 Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'r'                 Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -90,7 +94,8 @@
 'c'                 Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'r'                 Token.Name

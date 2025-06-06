@@ -7,7 +7,7 @@ import warnings
 from typing import Union, Mapping, Optional, Sequence, Tuple
 
 from pygments import token
-from pygments.lexer import Lexer, RegexLexer, words, include
+from pygments.lexer import Lexer, RegexLexer, words, include, bygroups
 from pygments.lexers import get_lexer_by_name
 from pygments.util import ClassNotFound
 
@@ -74,9 +74,19 @@ class OpenQASM3Lexer(RegexLexer):
 
     tokens = {
         "root": [
-            (r"^[ \t]*#?pragma", token.Comment.Preproc, "pragma"),
-            (r"^[ \t]*@\w+(\.\w+)*", token.Name.Decorator, "annotation"),
-            (r"[ \r\n\t]+", token.Whitespace),
+            (
+                r"^([ \t]*)(#?pragma)([ \t]*)",
+                bygroups(token.Whitespace, token.Comment.Preproc, token.Whitespace),
+                "annotation",
+            ),
+            (
+                r"^([ \t]*)(@\w+(\.\w+)*)([ \t]*)",
+                bygroups(token.Whitespace, token.Name.Decorator, token.Whitespace),
+                "annotation",
+            ),
+            # Newline terminates the tokenisation so that new-line sensitive matches like annotations
+            # get to see the start-of-line character in their match.
+            (r"([ \r\t]+\n*)|(\n+)", token.Whitespace),
             (r"\bOPENQASM\b", token.Comment.Preproc, "version"),
             (r"//.*$", token.Comment.Single),
             (r"/\*", token.Comment.Multiline, "comment"),

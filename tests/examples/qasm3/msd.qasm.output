@@ -46,17 +46,20 @@
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 's'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'measure'           Token.Operator.Word
@@ -105,12 +108,14 @@
 'bool'              Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'temp'              Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '3'                 Token.Literal.Number
@@ -118,9 +123,11 @@
 ' '                 Token.Text.Whitespace
 'checks'            Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Encode two magic states in the [[4,2,2]] code' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -131,7 +138,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -139,7 +147,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -153,7 +162,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -167,7 +177,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -181,7 +192,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -195,9 +207,11 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Body of distillation circuit' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -211,7 +225,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -219,7 +234,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -232,7 +248,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -261,7 +278,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -269,7 +287,8 @@
 '2'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -277,7 +296,8 @@
 '2'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -291,7 +311,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -305,7 +326,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -318,7 +340,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -344,7 +367,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -352,7 +376,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 's'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -360,7 +385,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -374,7 +400,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -387,7 +414,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -414,7 +442,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -428,7 +457,8 @@
 '2'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -442,7 +472,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -455,7 +486,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -481,7 +513,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -495,7 +528,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'inv'               Token.Name.Builtin
 ' '                 Token.Text.Whitespace
 '@'                 Token.Operator
@@ -507,7 +541,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -521,7 +556,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -529,7 +565,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -543,7 +580,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -557,7 +595,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -570,7 +609,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -599,7 +639,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -613,7 +654,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -627,7 +669,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -641,7 +684,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -654,7 +698,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -678,7 +723,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -692,7 +738,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -705,7 +752,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -732,7 +780,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cz'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -746,7 +795,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -760,7 +810,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'temp'              Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -773,7 +824,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'temp'              Token.Name
@@ -801,7 +853,8 @@
 ';'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -809,9 +862,11 @@
 '2'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Decode [[4,2,2]] code' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -825,7 +880,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -839,7 +895,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
@@ -853,7 +910,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -867,7 +925,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -875,7 +934,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'checks'            Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -884,7 +944,8 @@
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'success'           Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -920,7 +981,8 @@
 ')'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'success'           Token.Name
@@ -951,12 +1013,14 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bool'              Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'success'           Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'while'             Token.Keyword
 '('                 Token.Punctuation
 '~'                 Token.Operator
@@ -964,12 +1028,14 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'ry'                Token.Name.Function
 '('                 Token.Punctuation
 'pi'                Token.Name.Constant
@@ -981,7 +1047,8 @@
 ' '                 Token.Text.Whitespace
 'magic'             Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'success'           Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -994,7 +1061,8 @@
 'scratch'           Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
 '}'                 Token.Punctuation
@@ -1046,7 +1114,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'int'               Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number
@@ -1054,17 +1123,20 @@
 ' '                 Token.Text.Whitespace
 'index'             Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'success_0'         Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'success_1'         Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'magic_lvl0'        Token.Name
@@ -1079,7 +1151,8 @@
 '9'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'magic_lvl1_0'      Token.Name
@@ -1094,7 +1167,8 @@
 '19'                Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'magic_lvl1_1'      Token.Name
@@ -1109,7 +1183,8 @@
 '29'                Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'let'               Token.Keyword.Declaration
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
@@ -1124,11 +1199,14 @@
 '32'                Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Run first-level circuits until 10 successes,' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// storing the outputs for use in the second level' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -1145,7 +1223,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'rus_level_0'       Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic_lvl0'        Token.Name
@@ -1153,7 +1232,8 @@
 ' '                 Token.Text.Whitespace
 'scratch'           Token.Name
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'swap'              Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic_lvl0'        Token.Name
@@ -1167,7 +1247,8 @@
 'i'                 Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'swap'              Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic_lvl0'        Token.Name
@@ -1181,11 +1262,14 @@
 'i'                 Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Run two second level circuits simultaneously' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'success_0'         Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -1198,7 +1282,8 @@
 'scratch'           Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'success_1'         Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -1211,9 +1296,11 @@
 'scratch'           Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Move usable magic states into the buffer register' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'success_0'         Token.Name
@@ -1228,7 +1315,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'swap'              Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic_lvl1_0'      Token.Name
@@ -1252,16 +1340,19 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'index'             Token.Name
 ' '                 Token.Text.Whitespace
 '+='                Token.Operator
 ' '                 Token.Text.Whitespace
 '2'                 Token.Literal.Number
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'success_1'         Token.Name
@@ -1276,7 +1367,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'swap'              Token.Name.Function
 ' '                 Token.Text.Whitespace
 'magic_lvl1_1'      Token.Name
@@ -1300,14 +1392,16 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'index'             Token.Name
 ' '                 Token.Text.Whitespace
 '+='                Token.Operator
 ' '                 Token.Text.Whitespace
 '2'                 Token.Literal.Number
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
 '}'                 Token.Punctuation
@@ -1342,12 +1436,14 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 ' '                 Token.Text.Whitespace
 'outcome'           Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cy'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'buffer'            Token.Name
@@ -1358,7 +1454,8 @@
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'outcome'           Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -1371,7 +1468,8 @@
 ']'                 Token.Punctuation
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'outcome'           Token.Name

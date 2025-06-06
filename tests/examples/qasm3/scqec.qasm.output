@@ -265,9 +265,11 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Hadamards in the bulk' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -289,7 +291,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -311,7 +314,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number
@@ -333,7 +337,8 @@
 'col'               Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'sum'               Token.Name
@@ -345,7 +350,8 @@
 ' '                 Token.Text.Whitespace
 '1'                 Token.Literal.Number
 ')'                 Token.Punctuation
-'\n        '        Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'        '          Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
@@ -367,13 +373,17 @@
 'col'               Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Hadamards on the left and right boundaries' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -397,7 +407,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
@@ -427,7 +438,8 @@
 'i'                 Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
 '\n'                Token.Text.Whitespace
 '}'                 Token.Punctuation
@@ -468,19 +480,23 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'hadamard_layer'    Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// First round of CNOTs in the bulk' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -504,7 +520,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -527,7 +544,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '32'                Token.Literal.Number
@@ -549,7 +567,8 @@
 'col'               Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'sum'               Token.Name
@@ -561,7 +580,8 @@
 ' '                 Token.Text.Whitespace
 '0'                 Token.Literal.Number
 ')'                 Token.Punctuation
-'\n        '        Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'        '          Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'data'              Token.Name
@@ -597,7 +617,8 @@
 'col'               Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 'if'                Token.Keyword
 '('                 Token.Punctuation
 'sum'               Token.Name
@@ -611,7 +632,8 @@
 ')'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n        '        Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'        '          Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
@@ -647,15 +669,20 @@
 'col'               Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n      '          Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'      '            Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// First round of CNOTs on the bottom boundary' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -685,7 +712,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'data'              Token.Name
@@ -745,11 +773,14 @@
 'i'                 Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// First round of CNOTs on the right boundary' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'uint'              Token.Keyword.Type
@@ -779,7 +810,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
@@ -845,16 +877,20 @@
 'i'                 Token.Name
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Remaining rounds of CNOTs, go here ...' Token.Comment.Single
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'hadamard_layer'    Token.Name.Function
 ' '                 Token.Text.Whitespace
 'ancilla'           Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'measure'           Token.Operator.Word
@@ -885,14 +921,17 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Initialize'     Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'data'              Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'layer'             Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -905,7 +944,8 @@
 'ancilla'           Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'zfirst'            Token.Name.Function
 '('                 Token.Punctuation
 'layer'             Token.Name
@@ -917,9 +957,11 @@
 'd'                 Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// m cycles of syndrome measurement' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'for'               Token.Keyword
 ' '                 Token.Text.Whitespace
 'int'               Token.Keyword.Type
@@ -939,7 +981,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'layer'             Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -952,7 +995,8 @@
 'ancilla'           Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n    '            Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'    '              Token.Text.Whitespace
 'send'              Token.Name.Function
 '('                 Token.Punctuation
 'layer'             Token.Name
@@ -967,11 +1011,14 @@
 'd'                 Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '}'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// Measure'        Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'data_outcomes'     Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -980,7 +1027,8 @@
 ' '                 Token.Text.Whitespace
 'data'              Token.Name
 ';'                 Token.Punctuation
-'\n\n  '            Token.Text.Whitespace
+'\n\n'              Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'outcome'           Token.Name
 ' '                 Token.Text.Whitespace
 '='                 Token.Operator
@@ -996,7 +1044,8 @@
 'd'                 Token.Name
 ')'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'failures'          Token.Name
 ' '                 Token.Text.Whitespace
 '+='                Token.Operator

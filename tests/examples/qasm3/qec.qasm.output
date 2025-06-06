@@ -70,7 +70,8 @@
 ']'                 Token.Punctuation
 ' '                 Token.Text.Whitespace
 '{'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'bit'               Token.Keyword.Type
 '['                 Token.Punctuation
 '2'                 Token.Literal.Number
@@ -78,7 +79,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'd'                 Token.Name
@@ -92,7 +94,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'd'                 Token.Name
@@ -106,7 +109,8 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'd'                 Token.Name
@@ -120,7 +124,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'cx'                Token.Name.Function
 ' '                 Token.Text.Whitespace
 'd'                 Token.Name
@@ -134,7 +139,8 @@
 '1'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'measure'           Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'a'                 Token.Name
@@ -143,7 +149,8 @@
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'return'            Token.Keyword
 ' '                 Token.Text.Whitespace
 'b'                 Token.Name

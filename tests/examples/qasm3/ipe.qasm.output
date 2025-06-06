@@ -133,17 +133,20 @@
 '{'                 Token.Punctuation
 '  '                Token.Text.Whitespace
 '// implicitly cast val to int' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'reset'             Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'ctrl'              Token.Name.Builtin
 ' '                 Token.Text.Whitespace
 '@'                 Token.Operator
@@ -165,7 +168,8 @@
 ' '                 Token.Text.Whitespace
 'r'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'inv'               Token.Name.Builtin
 ' '                 Token.Text.Whitespace
 '@'                 Token.Operator
@@ -177,12 +181,14 @@
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'h'                 Token.Name.Function
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'measure'           Token.Operator.Word
 ' '                 Token.Text.Whitespace
 'q'                 Token.Name
@@ -194,18 +200,22 @@
 '0'                 Token.Literal.Number
 ']'                 Token.Punctuation
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// newest measurement outcome is associated to a pi/2 phase shift' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 '// in the next iteration, so shift all bits of c left' Token.Comment.Single
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'c'                 Token.Name
 ' '                 Token.Text.Whitespace
 '<<='               Token.Operator
 ' '                 Token.Text.Whitespace
 '1'                 Token.Literal.Number
 ';'                 Token.Punctuation
-'\n  '              Token.Text.Whitespace
+'\n'                Token.Text.Whitespace
+'  '                Token.Text.Whitespace
 'power'             Token.Name
 ' '                 Token.Text.Whitespace
 '<<='               Token.Operator
