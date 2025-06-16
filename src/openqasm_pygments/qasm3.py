@@ -80,7 +80,7 @@ class OpenQASM3Lexer(RegexLexer):
                 "annotation",
             ),
             (
-                r"^([ \t]*)(@\w+(\.\w+)*)([ \t]*)",
+                r"^([ \t]*)(@\w+(?:\.\w+)*)([ \t]*)",
                 bygroups(token.Whitespace, token.Name.Decorator, token.Whitespace),
                 "annotation",
             ),

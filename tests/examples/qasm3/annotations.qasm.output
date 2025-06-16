@@ -1,0 +1,32 @@
+'// Test lexing of annotations with namespaces' Token.Comment.Single
+'\n'                                            Token.Text.Whitespace
+'OPENQASM'                                      Token.Comment.Preproc
+' '                                             Token.Text.Whitespace
+'3.1'                                           Token.Literal
+';'                                             Token.Punctuation
+'\n'                                            Token.Text.Whitespace
+'@annotation'                                   Token.Name.Decorator
+'\n'                                            Token.Text.Whitespace
+'@annotation'                                   Token.Name.Decorator
+' '                                             Token.Text.Whitespace
+'value'                                         Token.Text
+'\n'                                            Token.Text.Whitespace
+'@annotation.long.namespace'                    Token.Name.Decorator
+'\n'                                            Token.Text.Whitespace
+'@annotation.long.namespace'                    Token.Name.Decorator
+'  '                                            Token.Text.Whitespace
+'value'                                         Token.Text
+'\n'                                            Token.Text.Whitespace
+' '                                             Token.Text.Whitespace
+'@annotation.long.namespace'                    Token.Name.Decorator
+'\n'                                            Token.Text.Whitespace
+' '                                             Token.Text.Whitespace
+'@annotation.long.namespace'                    Token.Name.Decorator
+'  '                                            Token.Text.Whitespace
+'value'                                         Token.Text
+'\n'                                            Token.Text.Whitespace
+'h'                                             Token.Name.Function
+' '                                             Token.Text.Whitespace
+'q'                                             Token.Name
+';'                                             Token.Punctuation
+'\n'                                            Token.Text.Whitespace
